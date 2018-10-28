@@ -1,0 +1,72 @@
+
+from IPython.core.display import HTML
+#from __future__ import print_func  tion, division
+import numpy as np
+import tensorflow as tf
+import matplotlib.pyplot as plt
+import pandas as pd
+import json
+from sklearn.model_selection import train_test_split
+
+
+
+# copying the dataframe so I have a before and after
+df_cir_hor_cclk = pd.read_csv('c:/Users/Franz Lom/Documents/TensorFlow/gesture_recognition/Data/extracted_data/cir_hor_cclk.csv') # saving circle horizontal counter clockwise csv as df
+df_v_shape = pd.read_csv('c:/Users/Franz Lom/Documents/TensorFlow/gesture_recognition/Data/extracted_data/v_shape.csv')
+#df_cir_hor_cclk['shape'] = 1
+#df_v_shape['shape'] = 2
+
+df_cir = df_cir_hor_cclk.copy()
+df_v = df_v_shape.copy()
+
+df_cir['shape'] = 1
+df_v['shape'] = 2
+
+def group_drawn_shape(grouped):
+    source = [x for x in grouped]
+    list_vec = list()
+    counter = 0
+    #padding = np.zeros((500, 3))  # to make all the arrays have a height of 500 and filling with 0
+    for v in source:
+        df = v[1]
+        df = df[['posX', 'posY', 'posZ']]
+        x = df.values
+        #padding[:x.shape[0], :x.shape[1]] = x
+        # print(padding.shape)
+        # print()
+        # print(padding)
+        x = x.flatten()
+        list_vec.append(x)
+
+    return np.array(list_vec)
+
+def train_input_fn(features, labels, batch_size):
+    """An input function for training"""
+    # Convert the inputs to a Dataset.
+    dataset = tf.data.Dataset.from_tensor_slices((dict(features), labels))
+
+    # Shuffle, repeat, and batch the examples.
+    dataset = dataset.shuffle(1000).repeat().batch(batch_size)
+
+    # Return the read end of the pipeline.
+    return dataset.make_one_shot_iterator().get_next()
+
+
+cir_something = group_drawn_shape(df_cir.groupby(['trial', 'tester']))
+v_something = group_drawn_shape(df_v.groupby(['trial', 'tester']))
+
+data = np.append(cir_something, v_something ,axis=0)
+
+
+x = np.ones([280,1], np.int32)
+zero_m = np.zeros([280, 1], np.int32)
+
+circle = np.concatenate((x, zero_m), axis=1)
+v_shape = np.concatenate((zero_m, x), axis=1)
+
+labels = np.concatenate([np.array(x), np.array(zero_m)])
+labels = labels.flatten()
+x={"x": data}
+
+train_input_fn(x, labels,0)
+
