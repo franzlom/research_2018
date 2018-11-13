@@ -4,7 +4,6 @@
     <list default="true" id="1920a9d5-87ac-42b5-bd1f-028fa8562b9c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/rnn_classifier.ipynb" afterPath="$PROJECT_DIR$/rnn_classifier.ipynb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,8 +46,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="371">
-                <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+              <first_editor relative-caret-position="303">
+                <caret line="48" column="7" lean-forward="true" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -138,8 +137,8 @@
         <option value="$PROJECT_DIR$/gru_rnn_gesture_recognition.ipynb" />
         <option value="$PROJECT_DIR$/Custom_gesture_classifier.ipynb" />
         <option value="$PROJECT_DIR$/Data/extracted_data/x_shape.csv" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/rnn_classifier.ipynb" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -381,7 +380,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542078922571</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="RNN CLASSIFIER jupyter notebook WORKS&#10;(ALTHOUGH ITS A DNN not a RNN)&#10;edit:  classifications&#10;edit: read me">
+      <created>1542080879839</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1542080879839</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -423,7 +429,8 @@
     <MESSAGE value="Before studio handin" />
     <MESSAGE value="RNN CLASSIFIER jupyter notebook WORKS&#10;(ALTHOUGH ITS A DNN not a RNN)" />
     <MESSAGE value="RNN CLASSIFIER jupyter notebook WORKS&#10;(ALTHOUGH ITS A DNN not a RNN)&#10;edit:  classifications" />
-    <option name="LAST_COMMIT_MESSAGE" value="RNN CLASSIFIER jupyter notebook WORKS&#10;(ALTHOUGH ITS A DNN not a RNN)&#10;edit:  classifications" />
+    <MESSAGE value="RNN CLASSIFIER jupyter notebook WORKS&#10;(ALTHOUGH ITS A DNN not a RNN)&#10;edit:  classifications&#10;edit: read me" />
+    <option name="LAST_COMMIT_MESSAGE" value="RNN CLASSIFIER jupyter notebook WORKS&#10;(ALTHOUGH ITS A DNN not a RNN)&#10;edit:  classifications&#10;edit: read me" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -748,8 +755,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="371">
-            <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+          <first_editor relative-caret-position="303">
+            <caret line="48" column="7" lean-forward="true" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
             <folding />
           </first_editor>
           <second_editor />

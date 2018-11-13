@@ -49,3 +49,20 @@ Train and Evaluate
 Results
 
 Predictions 
+
+
+
+
+# Test 1
+Columns:
+    
+    posX, posY, posZ, velX, velY, velZ
+    
+90.07% accuracy
+
+# Test 2
+Columns:
+
+    posX, posY, posZ, velX, velY, velZ, timestamp, quatX, quatY, questZ, quatW
+    
+30.02 Accuracy
